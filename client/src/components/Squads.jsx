@@ -1,11 +1,16 @@
-import React from "react"
+import React, {useState} from "react"
 
 function Squads(){
+
+
+   
+
    return (
       <div className="about-container">
          <h2>LIST ALL SQADS</h2>
-         <p>Ipage.</p>
-         <h3>Populate with data /cards</h3>
+         <div className="card-container">
+         <h2>PROJECTS</h2>
+         </div>
       </div>     
    )
 }
