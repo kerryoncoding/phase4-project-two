@@ -1,0 +1,34 @@
+{
+   "projects": [
+     {
+       "id": 1,
+       "name": "Victor Trap",
+       "description": "Battery opperated, WiFi enabled Rodent Trap",
+       "image": "http://www.kerryoncoding.com/images/victor.png"
+     },
+     {
+       "id": 2,
+       "name": "Checkpoint Antennas",
+       "description": "Neo family of RF antennas",
+       "image": "http://www.kerryoncoding.com/images/checkpt.png"
+     },
+     {
+       "id": 3,
+       "name": "Rachio Smart Sprinkler",
+       "description": "WiFi enabled smart sprinkler system",
+       "image": "http://www.kerryoncoding.com/images/rachio.png"
+     },
+     {
+       "name": "Draeger GT5400 Incubator",
+       "description": "Transport incubator for ambulances and helicopters",
+       "image": "http://www.kerryoncoding.com/images/drager.png",
+       "id": 4
+     },
+     {
+       "name": "Haas Laser Delivery Products",
+       "description": "Optical components for various laser applications ",
+       "image": "http://www.kerryoncoding.com/images/haas.png",
+       "id": 5
+     }
+   ]
+ }
