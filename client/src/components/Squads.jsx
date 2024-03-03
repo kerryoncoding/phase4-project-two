@@ -5,11 +5,8 @@ function Squads(){
       <div className="about-container">
          <h2>LIST ALL SQADS</h2>
          <p>Ipage.</p>
-         <div className="skill-list">
-            <h3>CREATE NEW POD</h3>
-         </div>
-      </div>
-      
+         <h3>Populate with data /cards</h3>
+      </div>     
    )
 }
 

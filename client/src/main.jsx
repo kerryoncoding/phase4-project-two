@@ -12,6 +12,7 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Create from "./components/Create"
 import Squads from "./components/Squads"
+import Login from "./components/Login"
 import NavBar from "./components/NavBar"
 import "./App.css"
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "create",
         element: <Create />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },
