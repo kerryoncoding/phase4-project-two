@@ -4,10 +4,9 @@ function Home(){
 
    return (
       <div className="home-container">
-         <h2>Hello, I am</h2>
-         <h1>Kerry Guarino</h1>
-         <img src="http://www.kerryoncoding.com/images/kerryavatar.png" alt="kerry avitar" className="homeImage" />
-         <h3>Engineer. Problem Solver. Lifelong Learner.</h3>
+         <h1>Welcome to PodSquad</h1>
+         <img src="http://www.kerryoncoding.com/images/podsquad_notext.jpg" alt="microphone image" className="homeImage" />
+         <h2>Chat about your favorite podcast!</h2>
       </div>
    )
 }

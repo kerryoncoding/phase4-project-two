@@ -11,6 +11,7 @@ import {
 import Home from "./components/Home"
 import About from "./components/About"
 import Create from "./components/Create"
+import Squads from "./components/Squads"
 import NavBar from "./components/NavBar"
 import "./App.css"
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "squads",
+        element: <Squads />,
       },
       {
         path: "about",

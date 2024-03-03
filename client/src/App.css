@@ -146,9 +146,11 @@ span {
 
 .home-container {
   /* display: block; */
+  padding-top:50px;
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
+  color: #153A4D;
 }
 
 .homeImage {
@@ -161,6 +163,7 @@ span {
 /* ABOUT */
 
 .about-container {
+  padding-top:50px;
   display: block;
   margin: 0 auto;
   max-width: 600px;
