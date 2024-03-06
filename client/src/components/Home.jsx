@@ -1,5 +1,5 @@
 import React from "react"
-import Squads from "./Squads"
+// import Squads from "./Squads"
 
 function Home(){
 
