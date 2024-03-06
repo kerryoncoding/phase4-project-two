@@ -1,5 +1,6 @@
 import React from "react"
 // import Squads from "./Squads"
+import Login from "./Login"
 
 function Home(){
 
@@ -9,6 +10,9 @@ function Home(){
          <img src="http://www.kerryoncoding.com/images/podsquad_notext.jpg" alt="microphone image" className="homeImage" />
          <h2>Come chat about your favorite podcast!</h2>
          {/* <Squads /> */}
+         <br />
+         <br />
+       <Login />
       </div>
    )
 }
