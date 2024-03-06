@@ -3,7 +3,6 @@ import React, {useState} from "react"
 function Squads(){
 
 
-   
 
    return (
       <div className="about-container">
