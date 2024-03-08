@@ -1,3 +1,11 @@
+
+
+
+//  ***** Currently not using   ********
+
+
+
+
 // Add a controlled form that includes:
 //      A text input
 //      A button with the text of “Click Me!”
@@ -11,38 +19,45 @@
 
 // submit... function to add stored length to counter
 
-import React, {useState} from "react"
-
-function Challenge(){
-   const [counter, setCounter] = useState(0)
-   const [tempLength, setTempLength] = useState("")
 
 
-   function handleInput(e){
-      console.log(e.target.value)
-      setTempLength(e.target.value)
-   }
-
-   function upDateCounter(e){
-      e.preventDefault()
-      console.log("clicked")
-      let newCounter = counter + tempLength.length
-      setCounter(newCounter)
-      setTempLength("")
-   }
+// ***********
 
 
-   return (
-      <div>
-         <form onSubmit={upDateCounter}>
-            <input type="text" value = {tempLength} onChange={handleInput} />
-            <input type="submit" value="Click Me!"></input>
-            <p>{counter}</p>
-         </form>
 
-      </div>
+
+// import React, {useState} from "react"
+
+// function Challenge(){
+//    const [counter, setCounter] = useState(0)
+//    const [tempLength, setTempLength] = useState("")
+
+
+//    function handleInput(e){
+//       console.log(e.target.value)
+//       setTempLength(e.target.value)
+//    }
+
+//    function upDateCounter(e){
+//       e.preventDefault()
+//       console.log("clicked")
+//       let newCounter = counter + tempLength.length
+//       setCounter(newCounter)
+//       setTempLength("")
+//    }
+
+
+//    return (
+//       <div>
+//          <form onSubmit={upDateCounter}>
+//             <input type="text" value = {tempLength} onChange={handleInput} />
+//             <input type="submit" value="Click Me!"></input>
+//             <p>{counter}</p>
+//          </form>
+
+//       </div>
    
-   )
-}
+//    )
+// }
 
-export default Challenge
+// export default Challenge
