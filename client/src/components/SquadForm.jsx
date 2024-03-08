@@ -9,12 +9,12 @@ function SquadForm({addSquad}){
    
    function handleForm(e){
       e.preventDefault()
-      let newProject = {
+      let newSquad = {
          name: name,
          description: description,
          image: image
       }
-      addSquad(newProject)
+      addSquad(newSquad)
       setName("")
       setImage("")
       setDescription("")
@@ -23,7 +23,7 @@ function SquadForm({addSquad}){
    return (
       <div className="formContainer">
          <h2>Add A New Squad</h2>
-         <form className="projectForm" onSubmit={handleForm}>
+         <form className="squadForm" onSubmit={handleForm}>
             <div>
                <label>Name: </label>
                <br />

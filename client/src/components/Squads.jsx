@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react"
 import Squadlist from "./Squadlist"
 
 function Squads() {
-   const [projectList, setProjectList] = useState([])
+   const [squadList, setSquadList] = useState([])
    const URL = "http://localhost:5173/components/squadlist"
 
    useEffect(()=>{
       fetch(URL)
       .then(res => res.json())
-      .then(data => setProjectList(data))
+      .then(data => setSquadList(data))
    },[])
 
    
@@ -18,8 +18,8 @@ function Squads() {
       })
       .then(res => res.json())
       .then(data=> {
-         let updatedList = projectList.filter((data)=> data.id != item)
-         setProjectList(updatedList)
+         let updatedList = squadList.filter((data)=> data.id != item)
+         setSquadList(updatedList)
       })
    }
 
@@ -31,7 +31,7 @@ function Squads() {
       <div className="about-container">
          <h2>LIST ALL SQADS</h2>
          <div className="card-container">
-            <Squadlist projectList={projectList} deleteItem={deleteItem} />
+            <Squadlist squadList={squadList} deleteItem={deleteItem} />
          </div>
       </div>     
    )

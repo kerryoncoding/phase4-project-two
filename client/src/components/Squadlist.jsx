@@ -1,20 +1,21 @@
 import React, {useState} from "react"
-// import ProjectForm from "./SquadForm"
+// import SquadForm from "./SquadForm"
 import SquadItem from "./SquadItem"
 
 
-function Squadlist({projectList, deleteItem}){
+function Squadlist({squadList, deleteItem}){
 
    const [showForm, setShowForm] = useState(false)
-   const [buttonText, setButtonText] = useState("Show")
 
-   function toggleForm() {
-      setShowForm(!showForm)
-      {(showForm) ? setButtonText("Show") : setButtonText("Hide")}
-   }
+   // const [buttonText, setButtonText] = useState("Show")
+
+   // function toggleForm() {
+   //    setShowForm(!showForm)
+   //    {(showForm) ? setButtonText("Show") : setButtonText("Hide")}
+   // }
 
 
-   const showSquads = projectList.map((item) => {
+   const showSquads = squadList.map((item) => {
 
       return (
          <SquadItem 
@@ -31,7 +32,7 @@ function Squadlist({projectList, deleteItem}){
          {showSquads}
          {/* <hr className="breakline" /> */}
          {/* <button onClick={toggleForm} className="formToggleButton">{buttonText} Form</button>
-         {(showForm) ? <ProjectForm addProject={addProject} /> : "" } */}
+         {(showForm) ? <SquadForm addSquad={addSquad} /> : "" } */}
       </div>
    )
 }

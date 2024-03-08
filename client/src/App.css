@@ -176,7 +176,7 @@ span {
   text-align: left;
 }
 
-/* PROJECTS */
+/* SQUADS */
 
 .card-container {
   display: block;
@@ -222,7 +222,7 @@ span {
   max-width: 80%
 }
 
-/* PROJECT FORM SECTION */
+/* SQUAD FORM SECTION */
 
 .formToggleButton {
   padding: 10px 20px;
@@ -246,6 +246,7 @@ span {
   margin: 0 auto;
   margin-bottom: 50px;
   max-width: 400px;
+  padding-left: 50px;
   border: rgb(60, 60, 60) solid 1px;
   border-radius: 15px;
 }
@@ -254,26 +255,26 @@ span {
   margin-top: 35px;
 }
 
-.projectForm {
+.squadForm {
+  margin-top: 15px;
   margin-bottom: 50px;
 }
 
 .formContainer
-
-.projectForm div {
+.squadForm div {
   margin-bottom: 20px;
 }
 
-.projectForm span{
+.squadForm span{
   padding: 20px;
 }
 
-.projectForm input {
+.squadForm input {
   border-radius: 4px;
   padding: 10px;
 }
 
-.projectForm Button {
+.squadForm Button {
   padding: 10px 20px;
   margin-top: 10px;
   background-color: #E4F1FE;
@@ -284,7 +285,7 @@ span {
   text-decoration: none;
 }
 
-.projectForm Button:hover {
+.squadForm Button:hover {
   background-color:#153A4D;
   color: white;
 }
