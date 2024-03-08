@@ -9,3 +9,18 @@ Currently, two official plugins are available:
 
 
 # HERE
+
+Need to give credit to:
+https://github.com/Enoch2k2/flatiron-flask-project-generator
+Enoch for providing a started template for Phase 4 final project
+
+Need to give credit to:
+https://github.dev/briancodex/react-sidebar-router-v6.4
+for assiting with sidebar code
+
+Need to give credit to my Phase 2 final project:
+https://github.com/kerryoncoding/engineering-portfolio
+which I used to leverage frontend react design and css styling
+
+
+
