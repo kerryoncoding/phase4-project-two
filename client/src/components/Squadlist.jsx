@@ -1,9 +1,9 @@
 import React, {useState} from "react"
-import ProjectForm from "./ProjectForm"
+// import ProjectForm from "./SquadForm"
 import SquadItem from "./SquadItem"
 
 
-function Squadlist({projectList, deleteItem, addProject}){
+function Squadlist({projectList, deleteItem}){
 
    const [showForm, setShowForm] = useState(false)
    const [buttonText, setButtonText] = useState("Show")
@@ -29,9 +29,9 @@ function Squadlist({projectList, deleteItem, addProject}){
       <div className="card-container">
          <h2>ALL SQUADS HERE.....</h2>
          {showSquads}
-         <hr className="breakline" />
-         <button onClick={toggleForm} className="formToggleButton">{buttonText} Form</button>
-         {(showForm) ? <ProjectForm addProject={addProject} /> : "" }
+         {/* <hr className="breakline" /> */}
+         {/* <button onClick={toggleForm} className="formToggleButton">{buttonText} Form</button>
+         {(showForm) ? <ProjectForm addProject={addProject} /> : "" } */}
       </div>
    )
 }

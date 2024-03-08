@@ -12,7 +12,7 @@ function Home(){
          {/* <Squads /> */}
          <br />
          <br />
-       <Login />
+       {/* <Login /> */}
       </div>
    )
 }

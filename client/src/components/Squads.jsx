@@ -24,26 +24,14 @@ function Squads() {
    }
 
 
-   function addProject(newProject){
-      fetch("http://localhost:5173/components/squadlist", {
-         method: "POST",
-         headers: {
-            "Content-Type":"application/json"
-         },
-         body: JSON.stringify(newProject)
-      })
-      .then(res => res.json())
-      .then(data => {
-         setProjectList([...projectList, data])
-      })
-   }
+
 
 
    return (
       <div className="about-container">
          <h2>LIST ALL SQADS</h2>
          <div className="card-container">
-            <Squadlist projectList={projectList} addProject={addProject} deleteItem={deleteItem} />
+            <Squadlist projectList={projectList} deleteItem={deleteItem} />
          </div>
       </div>     
    )

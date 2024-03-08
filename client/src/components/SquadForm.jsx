@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 
 
-function ProjectForm({addProject}){
+function SquadForm({addSquad}){
 
    const [name, setName] = useState("")
    const [description, setDescription] = useState("")
@@ -14,7 +14,7 @@ function ProjectForm({addProject}){
          description: description,
          image: image
       }
-      addProject(newProject)
+      addSquad(newProject)
       setName("")
       setImage("")
       setDescription("")
@@ -22,7 +22,7 @@ function ProjectForm({addProject}){
 
    return (
       <div className="formContainer">
-         <h2>Add A Project</h2>
+         <h2>Add A New Squad</h2>
          <form className="projectForm" onSubmit={handleForm}>
             <div>
                <label>Name: </label>
@@ -30,7 +30,7 @@ function ProjectForm({addProject}){
                <input type="text" id="name" value={name} onChange={(e)=>setName(e.target.value)}/>
             </div>
             <div>
-               <label>Image: </label>
+               <label>Image URL: </label>
             <br />
                <input type="text" id="image" value={image}  onChange={(e)=>setImage(e.target.value)} />
             </div>
@@ -48,4 +48,4 @@ function ProjectForm({addProject}){
 }
 
 
-export default ProjectForm;
+export default SquadForm;
