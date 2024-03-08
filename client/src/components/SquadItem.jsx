@@ -1,7 +1,7 @@
 import React from "react"
 
 
-function ProjectItem({item, deleteItem}){
+function SquadItem({item, deleteItem}){
 
       function handleDeleteClick(){
          deleteItem(item.id)
@@ -17,4 +17,4 @@ function ProjectItem({item, deleteItem}){
       )
 }
 
-export default ProjectItem;
+export default SquadItem;

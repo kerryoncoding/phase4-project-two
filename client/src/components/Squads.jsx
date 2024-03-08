@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
-import Projects from "./Projects"
+import Squadlist from "./Squadlist"
 
 function Squads() {
    const [projectList, setProjectList] = useState([])
-   const URL = "http://localhost:5173/components/projects"
+   const URL = "http://localhost:5173/components/squadlist"
 
    useEffect(()=>{
       fetch(URL)
@@ -25,7 +25,7 @@ function Squads() {
 
 
    function addProject(newProject){
-      fetch("http://localhost:5173/components/projects", {
+      fetch("http://localhost:5173/components/squadlist", {
          method: "POST",
          headers: {
             "Content-Type":"application/json"
@@ -43,8 +43,7 @@ function Squads() {
       <div className="about-container">
          <h2>LIST ALL SQADS</h2>
          <div className="card-container">
-            <h2>PROJECTS</h2>
-            <Projects projectList={projectList} addProject={addProject} deleteItem={deleteItem} />
+            <Squadlist projectList={projectList} addProject={addProject} deleteItem={deleteItem} />
          </div>
       </div>     
    )

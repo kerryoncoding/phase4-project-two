@@ -1,9 +1,9 @@
 import React, {useState} from "react"
 import ProjectForm from "./ProjectForm"
-import ProjectItem from "./ProjectItem"
+import SquadItem from "./SquadItem"
 
 
-function Projects({projectList, deleteItem, addProject}){
+function Squadlist({projectList, deleteItem, addProject}){
 
    const [showForm, setShowForm] = useState(false)
    const [buttonText, setButtonText] = useState("Show")
@@ -14,10 +14,10 @@ function Projects({projectList, deleteItem, addProject}){
    }
 
 
-   const showProjects = projectList.map((item) => {
+   const showSquads = projectList.map((item) => {
 
       return (
-         <ProjectItem 
+         <SquadItem 
          item = {item}
          key = {item.id}
          deleteItem= {deleteItem} />
@@ -27,8 +27,8 @@ function Projects({projectList, deleteItem, addProject}){
 
    return (
       <div className="card-container">
-         <h2>PROJECTS</h2>
-         {showProjects}
+         <h2>ALL SQUADS HERE.....</h2>
+         {showSquads}
          <hr className="breakline" />
          <button onClick={toggleForm} className="formToggleButton">{buttonText} Form</button>
          {(showForm) ? <ProjectForm addProject={addProject} /> : "" }
@@ -37,4 +37,4 @@ function Projects({projectList, deleteItem, addProject}){
 }
 
 
-export default Projects;
+export default Squadlist;
