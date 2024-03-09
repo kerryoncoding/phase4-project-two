@@ -17,7 +17,7 @@ migrate = Migrate(app, db)
 db.init_app(app)
 
 
-@app.route('/squads', methods=['GET', 'POST'])
+@app.route('/api/squads', methods=['GET', 'POST'])
 def squads():
   if request.method == 'GET':
     squads = Squad.query.order_by('created_at').all()
