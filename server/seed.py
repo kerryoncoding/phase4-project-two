@@ -10,7 +10,7 @@ from models import db, User, Squad
 
 with app.app_context():
   #  Delete all rows in tables
-  Squad.query.delete()
+  # Squad.query.delete()
 
   #  add squads
   s1 = Squad(name='Sunday Sitdown', image='https://image.simplecastcdn.com/images/4bf8292b-a5be-4d3a-a88c-328f0f42e38f/79d98736-2db7-473a-b591-191163d66a87/3000x3000/ss-jonbatiste-episodicartwork.jpg?aid=rss_feed', description='Conversations with Willie Geist and speical guests')

@@ -22,4 +22,4 @@ class Squad(db.Model, SerializerMixin):
    description = db.Column(db.String(200))
 
    def __repr__(self):
-      return f'Squad: {self.name}, imageURL: {self.image}, description: {self.description}'
+      return f'<Squad: {self.name}, imageURL: {self.image}, description: {self.description}>'
