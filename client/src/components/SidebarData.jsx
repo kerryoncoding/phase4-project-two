@@ -1,37 +1,38 @@
-import React from "react";
-import * as FaIcons from "react-icons/fa";
+
+import React from "react"
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
+
 
 export const SidebarData = [
   {
-      title: " Home",
-      path: "/",
-      icon: <AiIcons.AiFillHome />,
-      cName: "nav-text",
+    title: " Home",
+    path: "/",
+    icon: <AiIcons.AiFillHome />,
+    cName: "nav-text",
    },
    {
-      title: "Squads",
-      path: "/squads",
-      //  icon: <IoIcons.IoIosPaper />,
-      cName: "nav-text",
-  },
-  {
-      title: "About",
-      path: "/about",
-      //  icon: <IoIcons.IoIosPaper />,
-      cName: "nav-text",
-  },
-  {
-      title: "Create",
-      path: "/create",
-      //  icon: <FaIcons.FaCartPlus />,
-      cName: "nav-text",
+    title: "PodSquads",
+    path: "/squads",
+    cName: "nav-text",
    },
    {
-      title: "Login",
-      path: "/login",
-      //  icon: <FaIcons.FaCartPlus />,
-      cName: "nav-text",
+    title: "New Squad",
+    path: "/create",
+    cName: "nav-text",
   },
+  {
+    title: "All My Posts",
+    path: "/button",
+    cName: "nav-text",
+  },
+  {
+    title: "Statistics",
+    path: "/statistics",
+    cName: "nav-text",
+  },
+  {
+    title: "Chatroom",
+    path: "/chat",
+    cName: "nav-text",
+    },
 ];

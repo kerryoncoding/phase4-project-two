@@ -1,34 +1,10 @@
 {
-   "projects": [
+   "squads": [
      {
        "id": 1,
-       "name": "Victor Trap",
-       "description": "Battery opperated, WiFi enabled Rodent Trap",
-       "image": "http://www.kerryoncoding.com/images/victor.png"
-     },
-     {
-       "id": 2,
-       "name": "Checkpoint Antennas",
-       "description": "Neo family of RF antennas",
-       "image": "http://www.kerryoncoding.com/images/checkpt.png"
-     },
-     {
-       "id": 3,
-       "name": "Rachio Smart Sprinkler",
-       "description": "WiFi enabled smart sprinkler system",
-       "image": "http://www.kerryoncoding.com/images/rachio.png"
-     },
-     {
-       "name": "Draeger GT5400 Incubator",
-       "description": "Transport incubator for ambulances and helicopters",
-       "image": "http://www.kerryoncoding.com/images/drager.png",
-       "id": 4
-     },
-     {
-       "name": "Haas Laser Delivery Products",
-       "description": "Optical components for various laser applications ",
-       "image": "http://www.kerryoncoding.com/images/haas.png",
-       "id": 5
+       "name": "Sunday Sitdown",
+       "description": "Conversations with Willie Geist and speical guests",
+       "image": "https://image.simplecastcdn.com/images/4bf8292b-a5be-4d3a-a88c-328f0f42e38f/79d98736-2db7-473a-b591-191163d66a87/3000x3000/ss-jonbatiste-episodicartwork.jpg?aid=rss_feed"
      }
    ]
  }

@@ -1,78 +1,93 @@
-// import React, { useEffect } from 'react';
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useFormik } from "formik";
+import * as yup from "yup"
 
-const Login = () => (
-   <div>
-     <h1>Any place in your app!</h1>
-      <Formik
-         initialValues={{ email: '', password: '' }}
-         validate={values => {
-            const errors = {};
-            if (!values.email) {
-               errors.email = 'Required';
-            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-               errors.email = 'Invalid email address';
-            }
-            return errors;
-         }}
-         onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-               alert(JSON.stringify(values, null, 2));
-               setSubmitting(false);
-            }, 400);
-         }}
-      >
-      
-         {({ isSubmitting }) => (
-            <Form>
-               <label>Email</label>
-               <Field type="email" name="email" />
-               <ErrorMessage name="email" component="div" />
-               <label>Password</label>
-               <Field type="password" name="password" />
-               <ErrorMessage name="password" component="div" />
+
+function Login({ updateUser }) {
+
+   const [signUp, setSignUp] = useState(false)
+   // const history = useNavigate()
+
+
+   const handleClick = () => setSignUp((signUp) => !signUp)
+   const formSchema = yup.object().shape({
+      name: yup.string().required("Please enter a username"),
+      email: yup.string().email()
+   })
+
+   const formik = useFormik({
+      initialValues: {
+         name: "",
+         email: ""
+      },
+      validationSchema: formSchema,
+      onSubmit: (values, {resetForm}) => {
+         fetch(signUp ? '/api/users' : '/api/login', {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json"
+            },
+            body: JSON.stringify(values)
+         })
+            .then(res => res.json())
+            .then(user => {
+               // update user function needs to be made
+               updateUser(user)
+               resetForm()
+               // history.push('/')
+               // need to clear form after
+            })
+      },
+   });
+
+
+   return (
+      <div className="about-container">
+         <div className="card-container">
+            <h1>Login or sign up to enter PodSquad</h1>
+            <br />
+            <div className="formContainer"> 
+               <h2>{signUp ? 'Already a member?' : 'Not a member?'}</h2>
                <br/>
-               <button type="submit" disabled={isSubmitting}>Submit</button>
-            </Form>
-         )}
-     </Formik>
-   </div>
-);
+               <button className="messageToggleButton" onClick={handleClick}>{signUp ? 'Log In!' : 'Register now!'}</button>
+               <br />
+               <form className="squadForm" onSubmit={formik.handleSubmit}>
+                  <label>Username: </label>
+                  <br />
+                  <input
+                     id="name"
+                     name="name"
+                     type="text"
+                     onChange={formik.handleChange}
+                     value={formik.values.name}
+                  />
+                  <p style={{ color: "red" }}> {formik.errors.name}</p>
+                  <br />
+                  <br />
+                  {signUp && (
+                     <>
+                        <label>Email Address: </label>
+                        <br />
+                        <input
+                           id="email"
+                           name="email"
+                           type="text"
+                           onChange={formik.handleChange}
+                           value={formik.values.email}
+                        />
+                        <p style={{ color: "red" }}> {formik.errors.email}</p>
+                        <br />
+                     </>
+                  )}
+                  <br />
+                  <input className="messageToggleButton" type='submit' value={signUp ? 'Sign Up!' : 'Log In!'} />
+               </form>
+            </div>
+         </div>
+         </div>
+   );
+}
 
 export default Login;
 
-
-
-
-// function Login() {
-   
-
-//    return (
-//       <div className="about-container">
-//          <h2>Please Log in or Sign up!</h2>
-//          <div>  
-//             <label>
-//                Username
-//             </label>
-//             <input type='text' name='name'  />
-//          </div>
-//          <div>
-//             <label>
-//                Email
-//             </label>
-//             <input type='text' name='email'  />
-//             <div>
-//                <button>{'login'}</button>
-//             </div>
-//          </div>
-//             <h3>{'Not a member?'}</h3>
-//             <div>
-//                <button>{'Sign up!'}</button>
-//             </div>
-//       </div>
-      
-//    )
-// }
-
-// export default Login;

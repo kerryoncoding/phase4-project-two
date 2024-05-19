@@ -7,6 +7,36 @@
   font-family: "Lato", sans-serif;
 }
 
+/* TOGGLING THEME */
+.your-component.light {
+  /* --primary-color: green;
+  --secondary-color: red; */
+  background-color: #FFF;
+  /* color: #153A4D; */
+  height: 100vh;
+  /* color: #C6CACE; */
+}
+
+.your-component.dark {
+  /* --primary-color: red;
+  --secondary-color: green; */
+
+  background-color: #C6CACE;
+  /* color: #153A4D; */
+  /* background-color: #E8F0F5; */
+  height: 100vh;
+  
+  /* color:rgb(250, 250, 220); */
+}
+
+
+/* remove bullets from list in See all of my Posts */
+li {
+  list-style-type: none;
+}
+
+
+
 /* .home,
 .reports,
 .products {
@@ -144,14 +174,15 @@ span {
 
 /* HOME */
 
-.home-container {
+/* don't think I'm using this...  */
+/* .home-container { */
   /* display: block; */
-  padding-top:50px;
+  /* padding-top:50px;
   margin: 0 auto;
   max-width: 600px;
   text-align: center;
-  color: #153A4D;
-}
+  color: #153A4D; */
+/* } */
 
 .homeImage {
   border-radius: 10px;
@@ -169,6 +200,15 @@ span {
   max-width: 600px;
 }
 
+
+/* .squad-container {
+  padding-top:50px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 900px;
+} */
+
 .skill-list {
   display: block;
   margin: 0 auto;
@@ -179,34 +219,23 @@ span {
 /* SQUADS */
 
 .card-container {
-  display: block;
+  /* display: block; */
+  text-align: center;
   margin: 0 auto;
   max-width: 90%;
 }
 
 .card {
+  background-color: #FFF;
   text-align: center;
   border: rgb(60, 60, 60) solid 1px;
   box-shadow: 6px 6px 8px rgba(138, 138, 138, 0.3);
   border-radius: 15px;
   padding: 10px;
-  width: 400px;
-  height: 300px;
+  width: 200px;
+  height: 350px;
   display: inline-grid;
   margin: 10px 10px; 
-}
-
-.cardDeleteButton {
-  max-width: 30px;
-  padding: 5px;
-  border-radius: 50%;
-  background-color: #E4F1FE;
-  border: none;
-}
-
-.cardDeleteButton:hover {
-  background-color:#153A4D;
-  color: white;
 }
 
 
@@ -217,36 +246,41 @@ span {
 }
 
 .breakline {
-  margin-top: 40px;
-  margin-bottom: 25px;
-  max-width: 80%
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 600px;
 }
+
+
+/* LOGIN FORM */
+.LoginForm {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.LoginForm span{
+  padding: 20px;
+}
+
+.LoginForm input {
+  border-radius: 4px;
+  padding: 10px;
+  margin: 15px;
+  background-color:#E4F1FE ;
+}
+
 
 /* SQUAD FORM SECTION */
 
-.formToggleButton {
-  padding: 10px 20px;
-  margin-top: 2%;
-  margin-bottom: 70px;
-  background-color: #E4F1FE;
-  font-size: 20px;
-  border: none;
-  /* color: black; */
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.formToggleButton:hover {
-  background-color:#153A4D;
-  color: white;
-}
 
 .formContainer {
+  background-color: #FFF;
   display: block;
   margin: 0 auto;
   margin-bottom: 50px;
   max-width: 400px;
-  padding-left: 50px;
   border: rgb(60, 60, 60) solid 1px;
   border-radius: 15px;
 }
@@ -272,20 +306,86 @@ span {
 .squadForm input {
   border-radius: 4px;
   padding: 10px;
+  background-color:#E4F1FE ;
 }
 
-.squadForm Button {
-  padding: 10px 20px;
-  margin-top: 10px;
+
+/* ALL BUTTONS */
+
+.cardDeleteButton {
+  max-width: 30px;
+  padding: 5px;
+  border-radius: 50%;
   background-color: #E4F1FE;
-  font-size: 20px;
   border: none;
-  color: #153A4D;
+}
+
+.messageToggleButton {
+  padding: 8px 16px;
+  margin-bottom: 5px;
+  background-color: #E4F1FE;
+  font-size: 16px;
+  border: none;
   border-radius: 10px;
   text-decoration: none;
 }
 
-.squadForm Button:hover {
+.cardDeleteButton:hover,
+.messageToggleButton:hover{
   background-color:#153A4D;
   color: white;
+}
+
+.logout{
+  padding-top: 25px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: right;
+  /* align-items: right; */
+}
+
+
+
+
+/* *******************from chatterbox css************** */
+
+/* new message */
+form.new-message {
+  display: flex;
+  /* margin: 20px 50px; */
+}
+
+form.new-message input[type="text"] {
+  flex: 1 1 auto;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+/* form.new-message input[type="text"]:focus {
+  padding: 1rem;
+}
+
+form.new-message input[type="submit"] {
+  opacity: 0.8;
+}
+
+form.new-message input[type="submit"]:focus {
+  outline: none;
+  opacity: 1;
+} */
+
+
+
+/* ***************** CHAT ROOM ***************** */
+
+.chatbox {
+  background-color: #FFF;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 800px;
+  height: 800px;
+  border: rgb(60, 60, 60) solid 1px;
+  border-radius: 15px;
 }
