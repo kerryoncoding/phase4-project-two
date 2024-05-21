@@ -1,12 +1,15 @@
 
 from config import app
 
-from flask import Flask, request, make_response, jsonify, session, abort
+from flask import Flask, render_template, request, make_response, jsonify, session, abort
 from flask_cors import CORS
 # from flask_migrate import Migrate
 from models import Squad, User, Post, SquadUsers, db
 from flask_restful import Resource
+from flask_socketio import SocketIO, emit
 
+
+socketio = SocketIO(app)
 
 cors = CORS(app, origins="http://localhost:4000")
 
@@ -14,6 +17,19 @@ cors = CORS(app, origins="http://localhost:4000")
 @app.route('/')
 def home():
     return '<h1> This is home - server is running </h1>'
+
+
+
+# CHAT ###########################
+@app.route('/chat')
+def chat():
+    return render_template('chat.html')
+
+@socketio.on('message')
+def handle_message(message):
+    # Handle the received message
+    # You can emit a response back to the client using the emit function
+    emit('response', {'data': 'Response from server'})
 
 
 # SQUADS  ###################################################

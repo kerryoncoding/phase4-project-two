@@ -2,8 +2,8 @@
 
 import React, { useContext } from "react"
 import ThemeContext from './ThemeContext'
-import { ConnectionState } from './ConnectionState';
-import { ConnectionManager } from './ConnectionManager';
+import { ConnectionState } from './components/ConnectionState';
+import { ConnectionManager } from './components/ConnectionManager';
 import { Events } from "./Events";
 import { MyForm } from './MyForm';
 
